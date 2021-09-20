@@ -101,51 +101,51 @@ export class SFW {
 
 export class NSFW {
     public static async anal(): Promise<Response> {
-        return (await sendReq("/img/sfw/anal/gif"));
+        return (await sendReq("/img/nsfw/anal/gif"));
     }
     
     public static async boobjob(): Promise<Response> {
-        return (await sendReq("/img/sfw/boobjob/gif"));
+        return (await sendReq("/img/nsfw/boobjob/gif"));
     }
 
     public static async cum(): Promise<Response> {
-        return (await sendReq("/img/sfw/cum/gif"));
+        return (await sendReq("/img/nsfw/cum/gif"));
     }
 
     public static async fuck(): Promise<Response> {
-        return (await sendReq("/img/sfw/fuck/gif"));
+        return (await sendReq("/img/nsfw/fuck/gif"));
     }
 
     public static async neko(type?: ImageType): Promise<Response> {
-        return (await sendReq(`/img/sfw/neko/${type ? type.type : "gif"}`));
+        return (await sendReq(`/img/nsfw/neko/${type ? type.type : "gif"}`));
     }
 
     public static async pussylick(): Promise<Response> {
-        return (await sendReq("/img/sfw/pussylick/gif"));
+        return (await sendReq("/img/nsfw/pussylick/gif"));
     }
 
     public static async solo(): Promise<Response> {
-        return (await sendReq("/img/sfw/solo/gif"));
+        return (await sendReq("/img/nsfw/solo/gif"));
     }
 
     public static async threesome_fff(): Promise<Response> {
-        return (await sendReq("/img/sfw/threesome_fff/gif"));
+        return (await sendReq("/img/nsfw/threesome_fff/gif"));
     }
 
     public static async threesome_ffm(): Promise<Response> {
-        return (await sendReq("/img/sfw/threesome_ffm/gif"));
+        return (await sendReq("/img/nsfw/threesome_ffm/gif"));
     }
 
     public static async threesome_mmf(): Promise<Response> {
-        return (await sendReq("/img/sfw/threesome_mmf/gif"));
+        return (await sendReq("/img/nsfw/threesome_mmf/gif"));
     }
 
     public static async yaoi(): Promise<Response> {
-        return (await sendReq("/img/sfw/yaoi/gif"));
+        return (await sendReq("/img/nsfw/yaoi/gif"));
     }
 
     public static async yuri(): Promise<Response> {
-        return (await sendReq("/img/sfw/yuri/gif"));
+        return (await sendReq("/img/nsfw/yuri/gif"));
     }
 }
 
