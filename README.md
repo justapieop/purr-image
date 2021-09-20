@@ -13,13 +13,13 @@ npm i purr-image
 CommonJS:
 
 ```js
-const  ImageAPI  =  require("purr-image");
+const ImageAPI = require("purr-image");
 ```
 
 ES6:
 
 ```ts
-import  ImageAPI  from  "purr-image";
+import ImageAPI from "purr-image";
 ```
 
 ## Build
