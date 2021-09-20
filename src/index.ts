@@ -27,7 +27,7 @@ export class SFW {
     }
 
     public static async eevee(type?: ImageType): Promise<Response> {
-        return (await sendReq(`/img/sfw/dance/${type ? type : "gif"}`));
+        return (await sendReq(`/img/sfw/dance/${type ? type.type : "gif"}`));
     }
 
     public static async feed(): Promise<Response> {
@@ -63,7 +63,7 @@ export class SFW {
     }
 
     public static async neko(type?: ImageType): Promise<Response> {
-        return (await sendReq(`/img/sfw/neko/${type ? type : "gif"}`));
+        return (await sendReq(`/img/sfw/neko/${type ? type.type : "gif"}`));
     }
 
     public static async okami(): Promise<Response> {
@@ -117,7 +117,7 @@ export class NSFW {
     }
 
     public static async neko(type?: ImageType): Promise<Response> {
-        return (await sendReq(`/img/sfw/neko/${type ? type : "gif"}`));
+        return (await sendReq(`/img/sfw/neko/${type ? type.type : "gif"}`));
     }
 
     public static async pussylick(): Promise<Response> {
