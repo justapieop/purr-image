@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { Method } from "axios";
 import urljoin from "url-join";
 
 export class SFW {
@@ -149,6 +149,14 @@ export class NSFW {
     }
 }
 
+export async function quote(fields: QuoteField): Promise<Response> {
+    return (await sendReq("/quote", fields, "POST"));
+}
+
+export async function status(fields: StatusField): Promise<Response> {
+    return (await sendReq("/status", fields, "POST"));
+}
+
 export interface ImageType {
     type?: "img" | "gif"
 }
@@ -167,12 +175,26 @@ export interface ResponseDetail {
     user_agent?: string
 }
 
+export interface QuoteField {
+    avatar?: string,
+    message?: string,
+    nameColor?: string,
+    dateFormat?: string,
+    username?: string
+}
+
+export interface StatusField {
+    avatar?: string,
+    mobile?: boolean,
+    status?: string
+}
+
 const BASE_URL: string = "https://purrbot.site/api";
 
-async function sendReq(endpoint: string, fields?: any): Promise<Response> {
+async function sendReq(endpoint: string, fields: any = {}, method: Method = "GET"): Promise<Response> {
     const link: string = urljoin(BASE_URL, endpoint);
     const data: any = await (await axios.get(link, {
-        method: "GET",
+        method: method,
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json",
