@@ -135,4 +135,4 @@ dist
 .ionide
 
 # Typescript typings
-typing/
+typings/
