@@ -1,0 +1,42 @@
+{
+  "name": "purr-image",
+  "version": "1.0.0",
+  "description": "PurrBot ImageAPI Javascript Wrapper",
+  "main": "./dist/index.js",
+  "typings": "./typings/index.d.ts",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -b",
+    "dev": "tsc-watch -p ./tsconfig.json",
+    "prepare": "npm run build",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justapieop/purr-image.git"
+  },
+  "keywords": [
+    "purr-image",
+    "purrbot",
+    "imageapi"
+  ],
+  "author": "JustAPie",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/justapieop/purr-image/issues"
+  },
+  "homepage": "https://github.com/justapieop/purr-image#readme",
+  "devDependencies": {
+    "@types/node": "^16.9.3",
+    "@types/node-fetch": "^3.0.3",
+    "@types/url-join": "^4.0.1",
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "node-fetch": "^3.0.0",
+    "url-join": "^4.0.1"
+  }
+}
